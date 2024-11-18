@@ -1,0 +1,127 @@
+{
+  "type": "scaffold",
+  "args": {
+    "appBar": {
+      "type": "app_bar",
+      "args": {
+        "title": {
+          "type": "text",
+          "args": {
+            "text": "Login"
+          }
+        }
+      }
+    },
+    "body": {
+      "type": "safe_area",
+      "args": {
+        "bottom": true,
+        "child": {
+          "type": "container",
+          "args": {
+            "alignment": "center",
+            "child": {
+              "type": "single_child_scroll_view",
+              "args": {
+                "padding": [16, 0],
+                "child": {
+                  "type": "container",
+                  "args": {
+                    "alignment": "center",
+                    "constraints": {
+                      "maxWidth": 400
+                    },
+                    "child": {
+                      "type": "column",
+                      "args": {
+                        "mainAxisAlignment": "center",
+                        "mainAxisSize": "min",
+                        "children": [
+                          {
+                            "type": "text",
+                            "args": {
+                              "text": "Login",
+                              "style": {
+                                "fontSize": 24,
+                                "fontWeight": "bold"
+                              }
+                            }
+                          },
+                          {
+                            "type": "sized_box",
+                            "args": {
+                              "height": 24
+                            }
+                          },
+                          {
+                            "type": "text_form_field",
+                            "id": "email_address",
+                            "args": {
+                              "decoration": {
+                                "hintText": "name@example.com",
+                                "labelText": "Email Address"
+                              },
+                              "validators": [
+                                {
+                                  "type": "required"
+                                },
+                                {
+                                  "type": "email"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "sized_box",
+                            "args": {
+                              "height": 16
+                            }
+                          },
+                          {
+                            "type": "text_form_field",
+                            "id": "password",
+                            "args": {
+                              "decoration": {
+                                "hintText": "Password",
+                                "labelText": "Password"
+                              },
+                              "obscureText": true,
+                              "validators": [
+                                {
+                                  "type": "required"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "sized_box",
+                            "args": {
+                              "height": 24
+                            }
+                          },
+                          {
+                            "type": "elevated_button",
+                            "id": "login_button",
+                            "args": {
+                              "onPressed": "${onLoginPressed}",
+                              "child": {
+                                "type": "text",
+                                "args": {
+                                  "text": "Login"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
